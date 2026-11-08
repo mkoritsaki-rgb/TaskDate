@@ -1,0 +1,1555 @@
+
+/* ==========================================
+   1. ΧΡΩΜΑΤΑ TASKDATE
+   ========================================== */
+
+/* Κεντρική χρωματική παλέτα */
+:root {
+    --primary: #8151AA;
+    --primary-dark: #58327F;
+    --primary-light: #E9D9F5;
+
+    --background: #EEE4F7;
+    --surface: #F9F3FD;
+    --surface-accent: #E5D3F2;
+
+    --text: #49315F;
+    --muted: #765E8B;
+
+    --border: #D9C1E9;
+
+    --success: #397D60;
+    --success-light: #E2F0E8;
+
+    --danger: #BB456C;
+    --danger-light: #F8E4ED;
+
+    --shadow: 0 8px 25px rgba(75, 40, 116, 0.12);
+
+    --radius: 16px;
+}
+
+/* Ενιαίος υπολογισμός διαστάσεων */
+* {
+    box-sizing: border-box;
+}
+
+/* Ομαλή κύλιση */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Βασική εμφάνιση σελίδας */
+body {
+    margin: 0;
+    padding: 32px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #EEE4F7, #E5D7F1, #F2E5F2);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   2. ΤΙΤΛΟΙ ΚΑΙ ΚΕΙΜΕΝΑ
+   ========================================== */
+
+/* Κεντρικοί τίτλοι */
+h1 {
+    color: var(--primary-dark);
+    font-size: 32px;
+    font-weight: 750;
+    margin: 0 0 25px;
+}
+
+/* Δευτερεύοντες τίτλοι */
+h2 {
+    color: #704493;
+    font-size: 23px;
+    margin: 28px 0 16px;
+}
+
+/* Τίτλοι εργασιών και ραντεβού */
+h3 {
+    color: #8151AA;
+    font-size: 19px;
+    margin: 18px 0 8px;
+}
+
+/* Βασικά κείμενα */
+p {
+    color: var(--text);
+    margin: 10px 0;
+}
+
+/* Δευτερεύουσες πληροφορίες */
+small {
+    color: var(--muted);
+}
+
+/* ==========================================
+   3. ΣΥΝΔΕΣΜΟΙ
+   ========================================== */
+
+/* Βασική εμφάνιση συνδέσμων */
+a {
+    color: #75449A;
+    font-weight: 650;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Εφέ επιλογής συνδέσμου */
+a:hover {
+    color: #B064B5;
+}
+
+/* Εμφάνιση εστίασης */
+a:focus-visible {
+    outline: 3px solid #C69AD9;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   4. ΦΟΡΜΕΣ
+   ========================================== */
+
+/* Κεντρικές φόρμες */
+form {
+    width: 100%;
+    max-width: 760px;
+    margin: 22px 0;
+    padding: 25px;
+    background: linear-gradient(145deg, #F9F3FD, #F0E4F8);
+    border: 1px solid #D7BCE9;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Ετικέτες πεδίων */
+label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Πεδία εισαγωγής */
+input:not([type="hidden"]),
+textarea,
+select {
+    display: block;
+    width: 100%;
+    min-height: 45px;
+    padding: 11px 13px;
+    margin-bottom: 17px;
+    border: 1px solid #CEB0E2;
+    border-radius: 9px;
+    background: #FFFAFF;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
+}
+
+/* Περιοχή πολλαπλών γραμμών */
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Εστίαση στα πεδία */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #9462BB;
+    box-shadow: 0 0 0 3px rgba(129, 81, 170, 0.17);
+}
+
+/* ==========================================
+   5. ΚΟΥΜΠΙΑ
+   ========================================== */
+
+/* Βασικά κουμπιά */
+button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 44px;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #8151AA, #58327F);
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Εφέ επιλογής κουμπιού */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(75, 40, 116, 0.24);
+}
+
+/* Εστίαση κουμπιού */
+button:focus-visible {
+    outline: 3px solid #C69AD9;
+    outline-offset: 3px;
+}
+
+/* ==========================================
+   6. ΔΙΑΧΩΡΙΣΤΙΚΑ
+   ========================================== */
+
+/* Οριζόντιες γραμμές */
+hr {
+    border: none;
+    height: 1px;
+    background: #D8C2E8;
+    margin: 28px 0;
+}
+
+/* ==========================================
+   7. ΑΡΧΙΚΗ ΣΕΛΙΔΑ
+   ========================================== */
+
+/* Κεντρικό πλαίσιο */
+.home-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+/* Κεφαλίδα αρχικής σελίδας */
+.home-header {
+    text-align: center;
+    margin-bottom: 45px;
+    padding: 30px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #58327F, #8151AA, #A875BD);
+    box-shadow: 0 12px 30px rgba(75, 40, 116, 0.22);
+}
+
+/* Μικρός εισαγωγικός τίτλος */
+.home-subtitle {
+    color: #EBD9F5;
+    font-size: 13px;
+    font-weight: 750;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Μεγάλος τίτλος εφαρμογής */
+.home-header h1 {
+    color: #FFFFFF;
+    font-size: clamp(40px, 6vw, 56px);
+    margin: 10px 0;
+}
+
+/* Περιγραφή εφαρμογής */
+.home-header > p:not(.home-subtitle) {
+    color: #F4EAFB;
+    font-size: 17px;
+}
+
+/* Πλέγμα καρτών */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+/* Κάρτες λειτουργιών */
+.home-card {
+    display: block;
+    min-height: 190px;
+    padding: 28px;
+    background: linear-gradient(145deg, #F9F3FD, #E9D9F5);
+    border: 1px solid #D1B1E3;
+    border-radius: 17px;
+    box-shadow: var(--shadow);
+    color: var(--text);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Εφέ κάρτας κατά την επιλογή */
+.home-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 13px 28px rgba(75, 40, 116, 0.18);
+    color: var(--text);
+}
+
+/* Τίτλος κάρτας */
+.home-card h2 {
+    color: #704493;
+    margin-top: 0;
+    font-size: 21px;
+}
+
+/* Περιγραφή κάρτας */
+.home-card p {
+    color: #765E8B;
+    font-size: 14px;
+}
+
+/* Υποσέλιδο */
+.home-footer {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ==========================================
+   8. ΚΑΡΤΕΣ ΚΑΙ ΜΗΝΥΜΑΤΑ
+   ========================================== */
+
+/* Γενική κάρτα περιεχομένου */
+.content-card {
+    padding: 24px;
+    margin: 20px 0;
+    background: linear-gradient(145deg, #FAF5FD, #EDE1F6);
+    border: 1px solid #D8C1E8;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Μήνυμα επιτυχίας */
+.success-message {
+    padding: 13px 16px;
+    margin: 15px 0;
+    border: 1px solid #B9DEC9;
+    border-radius: 9px;
+    background: var(--success-light);
+    color: var(--success);
+}
+
+/* Μήνυμα λάθους */
+.error-message {
+    padding: 13px 16px;
+    margin: 15px 0;
+    border: 1px solid #E9C2D1;
+    border-radius: 9px;
+    background: var(--danger-light);
+    color: var(--danger);
+}
+
+/* Ολοκληρωμένη εργασία */
+.status-completed {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: var(--success-light);
+    color: var(--success);
+}
+
+/* Εργασία σε εκκρεμότητα */
+.status-pending {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* ==========================================
+   9. ΠΛΟΗΓΗΣΗ
+   ========================================== */
+
+/* Περιοχή συνδέσμων */
+.page-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* Κουμπιά πλοήγησης */
+.page-links a {
+    display: inline-block;
+    padding: 11px 18px;
+    border-radius: 9px;
+    background: #704493;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Εφέ πλοήγησης */
+.page-links a:hover {
+    background: #4E2D70;
+    color: #FFFFFF;
+}
+
+/* ==========================================
+   10. ΚΙΝΗΤΑ ΚΑΙ TABLET
+   ========================================== */
+
+/* Προσαρμογή σε tablet */
+@media (max-width: 900px) {
+
+    body {
+        padding: 22px;
+    }
+
+    .home-container {
+        margin: 30px auto;
+    }
+
+}
+
+/* Προσαρμογή σε κινητά */
+@media (max-width: 600px) {
+
+    body {
+        padding: 14px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 19px;
+    }
+
+    .home-container {
+        margin: 25px auto;
+    }
+
+    .home-header {
+        padding: 23px 15px;
+        margin-bottom: 30px;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .home-card {
+        min-height: 150px;
+        padding: 22px;
+    }
+
+    form {
+        padding: 17px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .page-links {
+        flex-direction: column;
+    }
+
+    .page-links a {
+        text-align: center;
+    }
+
+}
+
+/* ==========================================
+   11. ΚΕΝΤΡΙΚΟ ΜΕΝΟΥ ΠΛΟΗΓΗΣΗΣ
+   ========================================== */
+
+/* Κεντρική εμφάνιση του μενού */
+.main-navigation {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 68px;
+    margin: 0 auto 30px;
+    padding: 12px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    background: linear-gradient(110deg, #58327F, #8151AA);
+    border-radius: 15px;
+    box-shadow: 0 7px 20px rgba(75, 40, 116, 0.20);
+}
+
+/* Όνομα εφαρμογής στο μενού */
+.nav-brand {
+    color: #FFFFFF !important;
+    font-size: 23px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+/* Περιοχή συνδέσμων */
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+/* Σύνδεσμοι του μενού */
+.main-navigation .nav-links a {
+    padding: 9px 14px;
+    border-radius: 8px;
+    color: #F4EAFB;
+    font-size: 14px;
+    font-weight: 650;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Εφέ κατά την επιλογή */
+.main-navigation .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.16);
+    color: #FFFFFF;
+}
+
+/* Ξεχωρίζουμε την ενεργή σελίδα */
+.main-navigation .nav-links a.active {
+    background: #E9D9F5;
+    color: #58327F;
+}
+
+/* Προσαρμογή μενού σε κινητά */
+@media (max-width: 600px) {
+
+    .main-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 17px;
+    }
+
+    .nav-links {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .main-navigation .nav-links a {
+        padding: 9px 10px;
+        font-size: 13px;
+    }
+
+}
+
+/* ==========================================
+   12. ΣΕΛΙΔΑ ΕΡΓΑΣΙΩΝ
+   ========================================== */
+
+/* Κεντρικό πλαίσιο της σελίδας */
+.page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+/* Κεφαλίδα ενότητας */
+.page-heading {
+    margin-bottom: 30px;
+}
+
+/* Μικρός τίτλος ενότητας */
+.page-eyebrow {
+    color: #9563B8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/* Περιγραφή κεφαλίδας */
+.page-intro {
+    color: #765E8B;
+    font-size: 16px;
+}
+
+/* Επικεφαλίδες επιμέρους ενοτήτων */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+/* Τίτλοι ενοτήτων */
+.section-heading h2 {
+    margin: 0 0 5px;
+}
+
+/* Περιγραφές ενοτήτων */
+.section-heading p {
+    margin: 0;
+    color: #765E8B;
+}
+
+/* Περιοχή δημιουργίας εργασίας */
+.task-create-panel {
+    padding: 28px;
+    margin-bottom: 40px;
+    border: 1px solid #D1B1E3;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #E7D5F2, #F6ECFA);
+    box-shadow: 0 8px 25px rgba(75, 40, 116, 0.10);
+}
+
+/* Περιοχή φόρμας εργασίας */
+.task-form {
+    max-width: 100%;
+    padding: 0;
+    margin: 20px 0 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Πεδίο φόρμας */
+.form-field {
+    margin-bottom: 14px;
+}
+
+/* Κουμπί προσθήκης */
+.button-primary {
+    background: linear-gradient(135deg, #8151AA, #58327F);
+}
+
+/* Μετρητής εργασιών */
+.task-counter {
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: #E1CFF0;
+    color: #58327F;
+    font-size: 13px;
+    font-weight: 750;
+}
+
+/* Λίστα καρτών */
+.task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 18px;
+}
+
+/* Κάρτα εργασίας */
+.task-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 225px;
+    padding: 22px;
+    border: 1px solid #D4BAE5;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #F9F0FC, #EBDDF5);
+    box-shadow: 0 6px 18px rgba(75, 40, 116, 0.09);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Εφέ κάρτας */
+.task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(75, 40, 116, 0.15);
+}
+
+/* Περιεχόμενο κάρτας */
+.task-card-content {
+    flex: 1;
+}
+
+/* Τίτλος και κατάσταση */
+.task-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Τίτλος εργασίας */
+.task-title-row h3 {
+    margin: 0;
+    color: #58327F;
+    font-size: 18px;
+}
+
+/* Κατάσταση εργασίας */
+.task-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+/* Εκκρεμής εργασία */
+.task-status.status-pending {
+    background: #E1CEF1;
+    color: #58327F;
+}
+
+/* Ολοκληρωμένη εργασία */
+.task-status.status-completed {
+    background: #D8EDE0;
+    color: #397D60;
+}
+
+/* Περιγραφή εργασίας */
+.task-description {
+    margin: 15px 0;
+    color: #765E8B;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* Περιοχή πληροφοριών εργασίας */
+.task-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 15px 0;
+    padding: 10px 12px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.55);
+    color: #624578;
+    font-size: 13px;
+}
+
+/* Κάθε πληροφορία εμφανίζεται σε ξεχωριστή γραμμή */
+.task-meta span {
+    display: block;
+}
+/* Ολοκληρωμένη κάρτα */
+.task-card.is-completed {
+    border-color: #BDDCCB;
+    background: linear-gradient(145deg, #EEF8F1, #E2F0E8);
+}
+
+/* Περιοχή κουμπιών */
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding-top: 15px;
+    margin-top: 12px;
+    border-top: 1px solid #DBC9E8;
+}
+
+/* Κοινή εμφάνιση συνδέσμου και κουμπιών ενεργειών */
+.task-actions .button-secondary,
+.task-actions button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Κουμπί επεξεργασίας */
+.button-secondary {
+    background: #DCC8EC;
+    color: #58327F;
+}
+
+/* Εφέ επεξεργασίας */
+.button-secondary:hover {
+    background: #CBB0E1;
+    color: #452761;
+}
+
+/* Κουμπί ολοκλήρωσης */
+.task-actions .button-complete {
+    background: #D6EDDE;
+    color: #276D4B;
+}
+
+/* Εφέ ολοκλήρωσης */
+.task-actions .button-complete:hover {
+    background: #BFE3CD;
+}
+
+/* Κουμπί διαγραφής */
+.task-actions .button-delete {
+    background: #F7DFE8;
+    color: #A53F62;
+}
+
+/* Εφέ διαγραφής */
+.task-actions .button-delete:hover {
+    background: #EEC6D6;
+}
+
+/* Φόρμες ενεργειών μέσα στην κάρτα */
+.task-actions .inline-action-form {
+    display: inline-flex;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Άδεια λίστα εργασιών */
+.empty-state {
+    padding: 45px 20px;
+    border: 1px dashed #C8A9DD;
+    border-radius: 16px;
+    background: #F4E8F9;
+    text-align: center;
+}
+
+/* Τίτλος άδειας λίστας */
+.empty-state h3 {
+    color: #704493;
+}
+
+/* Κείμενο άδειας λίστας */
+.empty-state p {
+    color: #765E8B;
+}
+
+/* Μηνύματα επιτυχίας και λάθους */
+.alert {
+    padding: 13px 17px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: 650;
+}
+
+.alert-success {
+    background: #DFF0E5;
+    color: #276D4B;
+}
+
+.alert-error {
+    background: #F8E2EA;
+    color: #A53F62;
+}
+
+/* Προσαρμογές σε κινητά */
+@media (max-width: 600px) {
+
+    .task-create-panel {
+        padding: 18px;
+    }
+
+    .task-list {
+        grid-template-columns: 1fr;
+    }
+
+    .task-card {
+        padding: 17px;
+    }
+
+    .task-actions button,
+    .task-actions .button-secondary {
+        flex: 1;
+    }
+
+    .task-actions .inline-action-form {
+        flex: 1;
+    }
+
+}
+
+/* ==========================================
+   13. ΣΕΛΙΔΑ ΡΑΝΤΕΒΟΥ
+   ========================================== */
+
+/* Περιοχή δημιουργίας ραντεβού */
+.appointment-create-panel {
+    padding: 28px;
+    margin-bottom: 40px;
+    border: 1px solid #D1B1E3;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #E7D5F2, #F6ECFA);
+    box-shadow: 0 8px 25px rgba(75, 40, 116, 0.10);
+}
+
+/* Φόρμα νέου ραντεβού */
+.appointment-form {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Πλέγμα πεδίων της φόρμας */
+.appointment-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px 22px;
+}
+
+/* Κάθε πεδίο της φόρμας */
+.appointment-form .form-field {
+    min-width: 0;
+    margin-bottom: 10px;
+}
+
+/* Το πεδίο σημειώσεων καταλαμβάνει δύο στήλες */
+.appointment-notes-field {
+    grid-column: 1 / -1;
+}
+
+/* Περιοχή εμφάνισης προτεινόμενης ώρας */
+.suggestion-panel {
+    padding: 24px;
+    margin: 25px 0;
+    border: 1px solid #C8A9DD;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #E9D9F5, #F5EAF9);
+    box-shadow: 0 6px 18px rgba(75, 40, 116, 0.10);
+}
+
+/* Τίτλος προτεινόμενης ώρας */
+.suggestion-panel h2 {
+    margin-top: 0;
+    color: #58327F;
+}
+
+/* Φόρμα αποδοχής πρότασης */
+.suggestion-form {
+    margin-top: 18px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Ενότητα καταχωρημένων ραντεβού */
+.appointments-section {
+    margin-top: 35px;
+}
+
+/* Πλέγμα καρτών ραντεβού */
+.appointments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 18px;
+}
+
+/* Κάρτα ραντεβού */
+.appointment-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    min-height: 220px;
+    padding: 22px;
+    border: 1px solid #D4BAE5;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #F9F0FC, #EBDDF5);
+    box-shadow: 0 6px 18px rgba(75, 40, 116, 0.09);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Εφέ κατά την επιλογή κάρτας */
+.appointment-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(75, 40, 116, 0.15);
+}
+
+/* Κεφαλίδα κάρτας ραντεβού */
+.appointment-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Όνομα προσώπου */
+.appointment-person {
+    margin: 0 0 5px;
+    color: #9563B8;
+    font-size: 12px;
+    font-weight: 750;
+}
+
+/* Θέμα ραντεβού */
+.appointment-card h3 {
+    margin: 0;
+    color: #58327F;
+    font-size: 19px;
+    overflow-wrap: anywhere;
+}
+
+/* Ένδειξη ημερομηνίας */
+.appointment-date-badge {
+    display: inline-block;
+    padding: 7px 11px;
+    border: 1px solid #D2B9E3;
+    border-radius: 25px;
+    background: #E6D4F1;
+    color: #58327F;
+    font-size: 12px;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+/* Περιοχή ώρας */
+.appointment-time {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 22px 0 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.65);
+    color: #704493;
+    font-size: 13px;
+}
+
+/* Έντονη εμφάνιση ώρας */
+.appointment-time strong {
+    color: #58327F;
+    font-size: 16px;
+}
+
+/* Σημειώσεις ραντεβού */
+.appointment-notes {
+    margin: 12px 0;
+    padding: 10px 12px;
+    border-left: 3px solid #B58ACF;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 5px;
+    color: #765E8B;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+/* Περιοχή ενεργειών */
+.appointment-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: auto;
+    padding-top: 17px;
+    border-top: 1px solid #DBC9E8;
+}
+
+/* Κουμπί επεξεργασίας */
+.appointment-actions .button-secondary,
+.appointment-actions .button-delete {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 750;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Εμφάνιση επεξεργασίας */
+.appointment-actions .button-secondary {
+    background: #DCC8EC;
+    color: #58327F;
+}
+
+/* Εφέ επεξεργασίας */
+.appointment-actions .button-secondary:hover {
+    background: #CBB0E1;
+    color: #452761;
+}
+
+/* Εμφάνιση διαγραφής */
+.appointment-actions .button-delete {
+    background: #F7DFE8;
+    color: #A53F62;
+}
+
+/* Εφέ διαγραφής */
+.appointment-actions .button-delete:hover {
+    background: #EEC6D6;
+}
+
+/* Φόρμα διαγραφής μέσα στην κάρτα */
+.appointment-actions .inline-action-form {
+    display: inline-flex;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Προσαρμογή φόρμας για tablet και κινητά */
+@media (max-width: 700px) {
+
+    .appointment-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-notes-field {
+        grid-column: auto;
+    }
+
+    .appointment-create-panel {
+        padding: 18px;
+    }
+
+    .appointments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-card {
+        padding: 18px;
+    }
+
+    .appointment-actions .button-secondary,
+    .appointment-actions .button-delete {
+        flex: 1;
+    }
+
+    .appointment-actions .inline-action-form {
+        flex: 1;
+    }
+
+}
+/* Πράσινη απόχρωση στην ημερομηνία του ραντεβού */
+.appointment-date-badge {
+    background: #DFF0E5;
+    border-color: #B9DCC6;
+    color: #397D60;
+}
+
+/* Πράσινη λεπτομέρεια στην περιοχή της ώρας */
+.appointment-time {
+    background: #EAF4ED;
+    border-left: 4px solid #75A889;
+}
+
+/* Πράσινη έμφαση στις ώρες */
+.appointment-time strong {
+    color: #397D60;
+}
+
+/* ==========================================
+   14. ΠΟΛΥΧΡΩΜΗ ΤΑΥΤΟΤΗΤΑ TASKDATE
+   ========================================== */
+
+/* Εναλλαγή χρωμάτων στις κάρτες της αρχικής σελίδας */
+.home-card:nth-child(3n+1) {
+    background: linear-gradient(145deg, #F0E5F8, #E3D3F0);
+}
+
+.home-card:nth-child(3n+2) {
+    background: linear-gradient(145deg, #E5F3E9, #D6EBDD);
+    border-color: #BDDCC9;
+}
+
+.home-card:nth-child(3n+3) {
+    background: linear-gradient(145deg, #E5F0F8, #D5E6F3);
+    border-color: #BDD5E8;
+}
+
+/* Εναλλαγή χρωμάτων στις κάρτες εργασιών */
+.task-card:nth-child(4n+1) {
+    background: linear-gradient(145deg, #F5EDFA, #E9DDF4);
+    border-color: #D4BAE5;
+    border-left: 5px solid #9671BC;
+}
+
+.task-card:nth-child(4n+2) {
+    background: linear-gradient(145deg, #EAF5ED, #DCEEE2);
+    border-color: #BDDCC9;
+    border-left: 5px solid #70A98A;
+}
+
+.task-card:nth-child(4n+3) {
+    background: linear-gradient(145deg, #EAF3FA, #DCEAF5);
+    border-color: #C1D8E9;
+    border-left: 5px solid #78A9CC;
+}
+
+.task-card:nth-child(4n+4) {
+    background: linear-gradient(145deg, #FBEFE8, #F5DFD4);
+    border-color: #EBCDBE;
+    border-left: 5px solid #D99678;
+}
+
+/* Διατηρούμε ξεχωριστό πράσινο χρώμα για τις ολοκληρωμένες εργασίες */
+.task-card.is-completed {
+    background: linear-gradient(145deg, #EAF5ED, #DCEEE2);
+    border-color: #BDDCC9;
+    border-left: 5px solid #397D60;
+}
+
+/* Εναλλαγή χρωμάτων στις κάρτες ραντεβού */
+.appointment-card:nth-child(4n+1) {
+    background: linear-gradient(145deg, #F5EDFA, #E9DDF4);
+    border-color: #D4BAE5;
+    border-top: 4px solid #9671BC;
+}
+
+.appointment-card:nth-child(4n+2) {
+    background: linear-gradient(145deg, #EAF5ED, #DCEEE2);
+    border-color: #BDDCC9;
+    border-top: 4px solid #70A98A;
+}
+
+.appointment-card:nth-child(4n+3) {
+    background: linear-gradient(145deg, #EAF3FA, #DCEAF5);
+    border-color: #C1D8E9;
+    border-top: 4px solid #78A9CC;
+}
+
+.appointment-card:nth-child(4n+4) {
+    background: linear-gradient(145deg, #FBEFE8, #F5DFD4);
+    border-color: #EBCDBE;
+    border-top: 4px solid #D99678;
+}
+
+/* Χρωματίζουμε τις ετικέτες ημερομηνίας */
+.appointment-card:nth-child(4n+1) .appointment-date-badge {
+    background: #E1D1EF;
+    border-color: #CBB2E0;
+    color: #58327F;
+}
+
+.appointment-card:nth-child(4n+2) .appointment-date-badge {
+    background: #D7EBDD;
+    border-color: #BDDCC9;
+    color: #397D60;
+}
+
+.appointment-card:nth-child(4n+3) .appointment-date-badge {
+    background: #D9EAF5;
+    border-color: #BCD5E8;
+    color: #416F91;
+}
+
+.appointment-card:nth-child(4n+4) .appointment-date-badge {
+    background: #F5E3D5;
+    border-color: #EBCDBE;
+    color: #995A40;
+}
+
+/* Εναλλαγή χρωματιστών περιοχών ώρας */
+.appointment-card:nth-child(4n+3) .appointment-time {
+    background: #D9EAF5;
+    border-left-color: #78A9CC;
+}
+
+.appointment-card:nth-child(4n+3) .appointment-time strong {
+    color: #416F91;
+}
+
+.appointment-card:nth-child(4n+4) .appointment-time {
+    background: #F5E3D5;
+    border-left-color: #D99678;
+}
+
+.appointment-card:nth-child(4n+4) .appointment-time strong {
+    color: #995A40;
+}
+
+/* Προσαρμόζουμε τις σημειώσεις ώστε να παραμένουν ευανάγνωστες */
+.appointment-notes {
+    background: rgba(255, 255, 255, 0.55);
+}
+
+/* ==========================================
+   15. ΣΕΛΙΔΕΣ ΕΠΕΞΕΡΓΑΣΙΑΣ
+   ========================================== */
+
+/* Κεντρική κάρτα επεξεργασίας */
+.edit-panel {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 30px;
+    border: 1px solid #D4BAE5;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #F5EDFA, #E9DDF4);
+    box-shadow: 0 8px 25px rgba(75, 40, 116, 0.10);
+}
+
+/* Φόρμα επεξεργασίας */
+.edit-form {
+    max-width: 100%;
+    margin: 20px 0 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Περιοχή κουμπιών επεξεργασίας */
+.edit-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+/* Κουμπί επιστροφής */
+.edit-actions .button-secondary {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 43px;
+    padding: 10px 18px;
+    border-radius: 9px;
+    background: #DCC8EC;
+    color: #58327F;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Εφέ κουμπιού επιστροφής */
+.edit-actions .button-secondary:hover {
+    background: #CBB0E1;
+    color: #452761;
+}
+
+/* Προσαρμογή σε κινητά */
+@media (max-width: 600px) {
+
+    .edit-panel {
+        padding: 18px;
+    }
+
+    .edit-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .edit-actions .button-secondary {
+        width: 100%;
+    }
+
+}
+
+/* ==========================================
+   16. ΕΠΕΞΕΡΓΑΣΙΑ ΡΑΝΤΕΒΟΥ
+   ========================================== */
+
+/* Εφαρμόζουμε διάταξη δύο στηλών στη φόρμα */
+.appointment-edit-form .appointment-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px 22px;
+}
+
+/* Το πεδίο σημειώσεων καταλαμβάνει όλο το πλάτος */
+.appointment-edit-form .appointment-notes-field {
+    grid-column: 1 / -1;
+}
+
+/* Περιοχή προτεινόμενης ώρας */
+.appointment-edit-panel + .suggestion-panel {
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+/* Προσαρμογή της φόρμας σε κινητές συσκευές */
+@media (max-width: 600px) {
+
+    .appointment-edit-panel .appointment-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .appointment-edit-form .appointment-notes-field {
+        grid-column: auto;
+    }
+
+}
+
+/* ==========================================
+   17. ΕΠΙΛΟΓΕΑΣ ΓΛΩΣΣΑΣ
+   ========================================== */
+
+/* Περιοχή επιλογής γλώσσας */
+.nav-language {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    color: #F4EAFB;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+/* Σύνδεσμοι γλωσσών */
+.nav-language a {
+    padding: 6px 9px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 7px;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* Εφέ επιλογής γλώσσας */
+.nav-language a:hover {
+    background: rgba(255,255,255,0.16);
+    color: #FFFFFF;
+}
+
+/* Ενεργή γλώσσα */
+.nav-language a.active-language {
+    background: #E9D9F5;
+    border-color: #E9D9F5;
+    color: #58327F;
+}
+
+/* Προσαρμογή επιλογέα σε κινητά */
+@media (max-width: 600px) {
+
+    .nav-language {
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255,255,255,0.25);
+    }
+
+}
+
+/* ==========================================
+   18. ΠΛΟΗΓΗΣΗ ΛΟΓΑΡΙΑΣΜΩΝ
+   ========================================== */
+
+/* Περιοχή λογαριασμού στο κεντρικό μενού. */
+.nav-account {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+/* Όνομα συνδεδεμένου χρήστη. */
+.nav-user-name {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Σύνδεσμοι εγγραφής και σύνδεσης. */
+.nav-account > a {
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Εφέ συνδέσμων λογαριασμού. */
+.nav-account > a:hover {
+    background: rgba(255, 255, 255, 0.16);
+    color: #FFFFFF;
+}
+
+/* Φόρμα αποσύνδεσης χωρίς τα γενικά χαρακτηριστικά των φορμών. */
+.nav-logout-form {
+    display: inline-flex;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Κουμπί αποσύνδεσης. */
+.nav-logout-button {
+    min-height: 36px;
+    padding: 7px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    background: #E9D9F5;
+    color: #58327F;
+    font-size: 13px;
+}
+
+/* Εφέ κουμπιού αποσύνδεσης. */
+.nav-logout-button:hover {
+    background: #FFFFFF;
+    color: #58327F;
+}
+
+/* Προσαρμογή σε κινητά. */
+@media (max-width: 600px) {
+
+    .nav-account {
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .nav-logout-button {
+        width: auto;
+    }
+
+}
+
+/* ==========================================
+   19. ΣΕΛΙΔΕΣ ΛΟΓΑΡΙΑΣΜΟΥ
+   ========================================== */
+
+/* Κεντρική κάρτα εγγραφής και σύνδεσης. */
+.account-panel {
+    max-width: 650px;
+    margin: 25px auto;
+}
+
+/* Φόρμα λογαριασμού. */
+.account-form {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Περιοχή μετάβασης μεταξύ εγγραφής και σύνδεσης. */
+.account-switch {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px solid #D9C1E9;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Σύνδεσμος μετάβασης. */
+.account-switch a {
+    font-weight: 750;
+}
+
+/* Προσαρμογή σε κινητά. */
+@media (max-width: 600px) {
+
+    .account-panel {
+        padding: 18px;
+    }
+
+}
